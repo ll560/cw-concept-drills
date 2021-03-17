@@ -17,25 +17,25 @@ console.log(`Concept 1: Logical Operators
 // 0-59 prints F
 
 let studentGrade;
-let score = 89;
+score = 95;
 
-if (score > 1 && 59 < score){
+if (score > 1 && 59 > score){
     studentGrade= "F";
     console.log(`The student's score is ${studentGrade}`);
 } else if
-    (score > 60 && 69 < score){
+    (score > 60 && 69 > score){
     studentGrade="D";
     console.log(`The student's score is ${studentGrade}`);
 } else if 
-    (score > 70 && 79 < score){   
+    (score > 70 && 79 > score){   
     studentGrade="C";
     console.log(`The student's score is ${studentGrade}`);
 } else if 
-    (score > 80 && 89 < score){
+    (score > 80 && 89 > score){
     studentGrade ="B";
     console.log(`The student's score is ${studentGrade}`);
 } else 
-    (score > 90 && 100 < score) //no curly brackts needed for else
+    (score > 90 && 100 > score) //no curly brackts needed for else
     studentGrade = "A";
     console.log(`The student's score is ${studentGrade}`);
 
@@ -78,9 +78,52 @@ Concept 2: Nesting Conditionals
 // 0-59 prints F
 
 
+score = 85
 
-
-
+if (score > 98 && 100 > score){
+    studentGrade = "A+";
+    console.log(`The student's score is ${studentGrade}`);
+    if (score > 94 && 97 > score){
+        studentGrade = "A";
+        console.log(`The student's score is ${studentGrade}`);
+        if (score > 90 && 93 > score)
+            studentGrade = "A-";
+            console.log(`The student's score is ${studentGrade}`);
+} else if
+    (score > 88 &&  89 > score)
+        studentGrade = "B+";
+        console.log(`The student's score is ${studentGrade}`);
+        if (score > 84 && 87 > score){
+            studentGrade = "B";
+            console.log(`The student's score is ${studentGrade}`);
+            }if (score > 80 && 83 > score){
+                studentGrade = "B-";
+                console.log(`The student's score is ${studentGrade}`);
+} else if
+    (score > 78 && 79 > score)
+    studentGrade = "C+";
+    console.log(`The student's score is ${studentGrade}`);
+        }if (score > 74 && 77 > score){
+            studentGrade = "C";
+            console.log(`The student's score is ${studentGrade}`);
+            }if (score > 70 && 73 > score){
+                studentGrade = "C-";
+                console.log(`The student's score is ${studentGrade}`);
+} else if
+    (score > 68 && 69 > score)
+    studentGrade = "D+";
+    console.log(`The student's score is ${studentGrade}`);
+        if (score > 64 && 67 > score){
+            studentGrade = "D";
+            console.log(`The student's score is ${studentGrade}`);
+            }if (score > 60 && 63 > score){
+                studentGrade = "D-";
+                console.log(`The student's score is ${studentGrade}`)
+} else {
+    (score > 59)
+    studentGrade = "F";
+    console.log(`The student's score is ${studentGrade}`)
+}
 
 
 
@@ -98,8 +141,8 @@ Concept 3: Ternary Operator
 //Write a conditional using the ternary operator to console.log(`No oil change needed.`); if timeSinceOil is less than 6. If timeSinceOil is 6 or more, console.log(`Get an oil change.`);
 // Test out several conditions by changing the timeSince Oil variable and refreshing your browswer with the console open. 
 
-
-
+let timeSinceOil = 9;
+let timeForOilChange = timeSinceOil <= 6 ? console.log (`No oil change needed.`) : console.log(`Get an oil change.`);
 
 
 
@@ -108,7 +151,8 @@ Concept 3: Ternary Operator
 // Test out all three conditions by changing the stopLight variable and refreshing your browswer with the console open. 
 
 
-
+let stopLight ="green";
+let carCommand = stopLight = "green" || "yellow" ? console.log(`Go!`) : console.log("Stop!");
 
 
 
@@ -138,11 +182,29 @@ Concept 4: Switch Statements
 // 7 prints `Happy Sunday!`
 // anything else prints `Not a valid day of the week.`
 
+let dayNum = '2';
 
-
-
-
-
+switch (dayNum){
+    case '1':
+        console.log(`Happy Monday!`);
+        break;
+    case '2':
+        console.log(`Happy Tuesday!`);
+        break;
+    case '3':
+        console.log(`Happy Wednesday!`);
+        break;
+    case '4':
+        console.log(`Happy Thursday!`);
+        break;
+    case '5':
+        console.log(`Happy Friday!`);
+        break;
+    case '6':
+        console.log(`Happy Saturday!`);
+    case '7':
+        console.log(`Happy Friday!`);
+}
 
 
 
@@ -157,9 +219,29 @@ Concept 4: Switch Statements
 // if month = "February" print `${month} has 28 or 29 days.`
 // if the month doesn't match any of those, print `${month} is not a valid month. Reset the variable and try again.`
 
+let month = 'May';
+
+switch(month){
+    case 'January':
+    case 'March':
+    case 'May':
+    case 'July':
+    case 'August':
+    case 'October':
+    case 'December':
+        console.log(`${month} has 31 days.`);
+        break;
+    case 'April':
+    case 'June':
+    case 'September':
+    case 'November':
+        console.log(`${month} has 30 days.`);
+        break;
 
 
 
+
+}
 
 
 
